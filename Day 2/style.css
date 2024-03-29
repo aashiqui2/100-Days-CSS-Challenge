@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 400px;
+    height: 400px;
+    background-color: #3FAF82;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+.bar{
+    width:70px;
+    height: 7px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}

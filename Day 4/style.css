@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 400px;
+    height: 400px;
+    background-color: #E56262;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* to center the container */
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 10px;
+}
+.center{
+    position: absolute;
+   width: 220px;
+   height: 220px;
+   top: 90px;
+   left: 90px;
+   /* background-color: white; */
+}
+.circle1{
+
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    /* background-color: red; */
+    background-color: #fff;
+    z-index: 3;
+    top: 95px;
+    left: 95px;
+    border-radius: 50px;
+    animation-fill-mode: both;
+    animation: jump1 2s infinite alternate;
+    animation-timing-function: cubic-bezier(.21,.98,6,.99);
+}
+.circle2{
+    width: 60px;
+    height: 60px;
+    /* background-color: green; */
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    border-radius: 100%;
+    z-index: 2;
+    animation-fill-mode: both;
+    animation: jump2 2s infinite alternate;
+    animation-timing-function: cubic-bezier(.21,.98,6,.99);
+
+}
+.circle3{
+    width: 90px;
+    height: 90px;
+    /* background-color: yellow; */
+    background-color: #fff;
+    position: absolute;
+    top: 65px;
+    left: 65px;
+    border-radius: 100%;
+    z-index: 1;
+    animation-fill-mode: both;
+    animation: jump3 2s infinite alternate;
+    animation-timing-function: cubic-bezier(.21,.98,6,.99);
+
+}
+@keyframes jump1{
+    0%,70%{
+        box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+        transform: scale(0);
+    }
+    100%{
+        box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+@keyframes jump2{
+    0%,40%{
+        box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+        transform: scale(0);
+    }
+    100%{
+        box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.2);
+        transform: scale(1);
+    }
+}
+@keyframes jump3{
+    0%,10%{
+        box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+        transform: scale(0);
+    }
+    100%{
+        box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.2);
+        transform: scale(1);
+    }
+}
